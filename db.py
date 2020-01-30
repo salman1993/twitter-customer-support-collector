@@ -13,7 +13,7 @@ from fetch import ApiRequest
 
 @toolz.memoize
 def db_conn():
-    return psycopg2.connect(dbname='twitter_cs', connection_factory=NamedTupleConnection)
+    return psycopg2.connect(dbname='twitter_cs', port=5455, connection_factory=NamedTupleConnection)
 
 
 LAST_TWEET_QUERY = """
